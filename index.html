@@ -14,37 +14,54 @@
             transform: scale(1.1); /* Powiększenie obrazka o 10% */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Dodanie cienia */
         }
+
+        .bottom-right-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px; /* szerokość obrazka */
+            height: auto; /* automatyczna wysokość */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bottom-right-button:hover {
+            transform: scale(1.1); /* Powiększenie obrazka o 10% */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
     </style>
 </head>
 <body>
-	<center>
-	<h1>Książki które przeczytałem</h1>
-	</center>
+    <center>
+        <h1>Książki które przeczytałem</h1>
+    </center>
     <a href="1.htm">
         <img src="1.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img">
     </a>
-        <a href="2.htm">
-            <img src="2.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img">
-        </a>
+    <a href="2.htm">
+        <img src="2.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img">
+    </a>
     <a href="3.htm">
         <img src="3.jpg" alt="Dziennik Cwaniaczka" style="width:280px;height:auto;" class="highlight-img">
     </a>
-	<a href="4.htm">
-		<img src="4.jpg" alt="Fnaf" style="width:290px;height:auto;" class="highlight-img">
-	</a>
-	<a href="5.htm">
-		<img src="5.jpg" alt="Cyberpunk" style="width:270px;height:auto;" class="highlight-img">
-	</a>
-	</center>
-		<center>
-		<h2>Książki które teraz czytam</h2> 
-		</center>
-		<a href="6.htm">
-			<img src="6.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img">
-        </a>
-		<a href="7.htm">
-			<img src="7.jpg" alt="Dziennik Cwaniaczka" style="width:264px;height:auto;" class="highlight-img">
-        </a>		
-	
+    <a href="4.htm">
+        <img src="4.jpg" alt="Fnaf" style="width:290px;height:auto;" class="highlight-img">
+    </a>
+    <a href="5.htm">
+        <img src="5.jpg" alt="Cyberpunk" style="width:270px;height:auto;" class="highlight-img">
+    </a>
+    <center>
+        <h2>Książki które teraz czytam</h2>
+    </center>
+    <a href="6.htm">
+        <img src="6.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img">
+    </a>
+    <a href="7.htm">
+        <img src="7.jpg" alt="wither" style="width:264px;height:auto;" class="highlight-img">
+    </a>
+
+    <a href="powiekszanie.htm">
+        <img src="lupa.png" alt="lupa" class="bottom-right-button">
+    </a>
 </body>
 </html>

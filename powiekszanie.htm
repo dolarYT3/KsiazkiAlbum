@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Album</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .highlight-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .highlight-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .bottom-right-button,
+        .exit-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .bottom-right-button:hover,
+        .exit-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from { transform: scale(0) }
+            to { transform: scale(1) }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Książki które przeczytałem</h1>
+    </center>
+    <img src="1.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+    <img src="2.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+    <img src="3.jpg" alt="Dziennik Cwaniaczka" style="width:280px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+    <img src="4.jpg" alt="Fnaf" style="width:290px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+    <img src="5.jpg" alt="Cyberpunk" style="width:270px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+    <center>
+        <h2>Książki które teraz czytam</h2>
+    </center>
+    <img src="6.jpg" alt="Dziennik Cwaniaczka" style="width:300px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+    <img src="7.jpg" alt="Wither" style="width:264px;height:auto;" class="highlight-img" onclick="openModal(this.src)">
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Exit button -->
+    <a href="index.html">
+        <img src="wyjscie.png" alt="Exit" class="exit-button">
+    </a>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = src;
+            captionText.innerHTML = event.target.alt;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
